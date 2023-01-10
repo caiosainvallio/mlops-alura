@@ -45,6 +45,7 @@ def home():
 
 
 @app.route('/sentimento/<frase>')
+@basic_auth.required
 def sentimento(frase):
     tb = TextBlob(frase)
     tb_eng = tb.translate(from_lang='pt', to='en')
