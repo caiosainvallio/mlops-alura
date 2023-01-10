@@ -9,7 +9,7 @@ import os
 
 
 # dataset
-df = pd.read_csv('../../data/processed/casas.csv')
+df = pd.read_csv('../data/processed/casas.csv')
 
 
 # modelo 1 (uma variavel)
