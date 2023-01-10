@@ -9,7 +9,7 @@ import os
 
 
 # dataset
-df = pd.read_csv('../../data/processed/casas.csv')
+df = pd.read_csv('data/processed/casas.csv')
 
 
 # modelo 1 (uma variavel)
@@ -27,7 +27,7 @@ modelo_1.fit(X_train_1, y_train_1)
 
 
 # modelo 2 (3 variaveis) from pickle
-modelo_2 = pickle.load(open('../../models/modelo.sav', 'rb'))
+modelo_2 = pickle.load(open('models/modelo.sav', 'rb'))
 
 # request
 colunas_json = ['tamanho', 'ano', 'garagem']
@@ -70,7 +70,7 @@ def cotacao_2():
     return jsonify(preco=preco[0])   
 
 
-
-app.run(debug=True, host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
 
 # pra rodar: python main.py
