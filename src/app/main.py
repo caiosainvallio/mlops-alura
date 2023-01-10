@@ -9,7 +9,7 @@ import os
 
 
 # dataset
-df = pd.read_csv('../data/processed/casas.csv')
+df = pd.read_csv('../../data/processed/casas.csv')
 
 
 # modelo 1 (uma variavel)
@@ -27,7 +27,7 @@ modelo_1.fit(X_train_1, y_train_1)
 
 
 # modelo 2 (3 variaveis) from pickle
-modelo_2 = pickle.load(open('../models/modelo.sav', 'rb'))
+modelo_2 = pickle.load(open('../../models/modelo.sav', 'rb'))
 
 # request
 colunas_json = ['tamanho', 'ano', 'garagem']
